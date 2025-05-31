@@ -1,18 +1,13 @@
 import React from "react";
 import BookGrid from "../components/BookGrid";
 import "../App.css";
-import { useBooks } from "../context/BookContext";
 
 /**
- * Best Sellers page - shows only books marked as isBestSeller=true.
+ * Best Sellers page - shows only books marked as isBestSeller=true using BookGrid.
  */
 // PUBLIC_INTERFACE
 function BestSellers() {
-  // Use the custom hook to get all books from context
-  const books = useBooks();
-  // Filter books for those marked as best sellers (isBestSeller property)
-  const bestSellers = books.filter((book) => book.isBestSeller);
-
+  // Reuse BookGrid's filtering prop for isBestSeller
   return (
     <div
       style={{
@@ -36,7 +31,8 @@ function BestSellers() {
             These titles are flying off the shelves! See what's trending now.
           </div>
         </section>
-        <BookGrid filter={(book) => book.isBestSeller} />
+        {/* Show only best sellers with BookGrid, includes Add to Cart */}
+        <BookGrid filter={(book) => book.isBestSeller === true} />
       </div>
       <footer
         style={{
