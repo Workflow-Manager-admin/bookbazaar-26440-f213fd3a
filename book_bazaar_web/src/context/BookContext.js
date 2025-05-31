@@ -18,6 +18,7 @@ const DUMMY_BOOKS = [
     price: 29.99,
     oldPrice: 34.99,
     image: "https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX258_BO1,204,203,200_.jpg",
+    // Explicitly mark this book as a best seller
     isBestSeller: true,
     isNewArrival: false,
   },
