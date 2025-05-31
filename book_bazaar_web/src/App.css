@@ -1,15 +1,22 @@
 :root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  /* BookBazaar Dark Theme Colors */
+  --primary-color: #2C3E50;
+  --secondary-color: #ECF0F1;
+  --accent-color: #E67E22;
+
+  /* Derived and theme variables */
+  --background-dark: var(--primary-color);
+  --background-light: var(--secondary-color);
+  --text-color: var(--secondary-color);
+  --text-secondary: rgba(236, 240, 241, 0.75); /* secondary with opacity */
+  --border-color: rgba(236, 240, 241, 0.09);   /* faint border */
+  --accent-hover: #ff9e47;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--kavia-dark);
+  background-color: var(--background-dark);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
