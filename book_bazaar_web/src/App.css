@@ -1,5 +1,15 @@
 :root {
-  /* BookBazaar Dark Theme Colors */
+  /* BookBazaar Yellow/White Reference Light Theme Colors for Home Page */
+  --primary-bg: #FFCC00;       /* sticky header, buttons */
+  --canvas-bg: #FFF;           /* main content */
+  --primary-text: #252525;     /* headings, nav */
+  --muted-text: #888;          /* secondary text */
+  --accent: #E53935;           /* highlighted/sale price, CTA */
+  --action-bg: #FFF;           /* card/input background */
+  --border-default: #EEE;      /* card borders */
+  --header-height: 60px;
+
+  /* BookBazaar Dark Theme Colors (needed for dark sections, e.g. Cart) */
   --primary-color: #2C3E50;
   --secondary-color: #ECF0F1;
   --accent-color: #E67E22;
