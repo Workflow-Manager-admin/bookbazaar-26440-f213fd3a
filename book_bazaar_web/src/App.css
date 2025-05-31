@@ -87,9 +87,11 @@ body {
 
 .title {
   font-size: 3.5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   margin: 0;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
 }
 
 .description {
