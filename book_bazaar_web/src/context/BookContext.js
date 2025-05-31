@@ -15,7 +15,8 @@ const DUMMY_BOOKS = [
     id: "1",
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt, David Thomas",
-    price: 34.99,
+    price: 29.99,
+    oldPrice: 34.99,
     image: "https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX258_BO1,204,203,200_.jpg",
     isBestSeller: true,
     isNewArrival: false
