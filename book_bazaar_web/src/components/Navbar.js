@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../App.css";
+import { useCart } from "../context/CartContext";
 
 // PUBLIC_INTERFACE
 /**
@@ -8,6 +9,9 @@ import "../App.css";
  * Displays links for Home, Best Sellers, New Arrivals, Contact Info, and Cart icon.
  */
 function Navbar() {
+  const { getCartCount } = useCart ? useCart() : { getCartCount: () => 0 };
+  const cartCount = getCartCount ? getCartCount() : 0;
+
   return (
     <nav className="navbar">
       <div className="container">
@@ -38,7 +42,7 @@ function Navbar() {
               aria-label="Cart"
               title="View Cart"
             >
-              🛒 Cart
+              🛒 Cart{cartCount > 0 ? ` (${cartCount})` : ""}
             </NavLink>
           </div>
         </div>
