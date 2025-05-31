@@ -1,5 +1,6 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
+import CartItem from "../components/CartItem";
 
 /**
  * Cart page - shows all books in cart with quantity controls and total price.
@@ -48,72 +49,16 @@ function Cart() {
           boxShadow: "0 8px 32px 0 rgba(44,62,80,0.20)",
         }}
       >
-        <table style={{ width: "100%", color: "var(--secondary-color)" }}>
-          <thead>
-            <tr style={{ color: "var(--accent-color)", fontWeight: 600 }}>
-              <th align="left" style={{ padding: "12px 0" }}>Book</th>
-              <th>Price</th>
-              <th>Qty</th>
-              <th>Subtotal</th>
-              <th />
-            </tr>
-          </thead>
-          <tbody>
-            {cartItems.map(({ book, quantity }) => (
-              <tr key={book.id}>
-                <td style={{ padding: "10px 0", maxWidth: "240px" }}>
-                  <span title={book.title}>{book.title}</span>
-                  <div style={{
-                    color: "var(--text-secondary)",
-                    fontSize: "0.93rem"
-                  }}>{book.author}</div>
-                </td>
-                <td style={{ textAlign: "center" }}>
-                  ${book.price.toFixed(2)}
-                </td>
-                <td style={{ textAlign: "center" }}>
-                  <div style={{ display: "flex", gap: 5, alignItems: "center", justifyContent:"center" }}>
-                    <button
-                      onClick={() => decrementQty(book.id)}
-                      className="btn"
-                      aria-label={`Decrease quantity of ${book.title}`}
-                      style={{ minWidth: 30, fontSize: "1.2rem", padding: "4px 8px" }}
-                      disabled={quantity <= 1}
-                      title="Decrease quantity"
-                    >–</button>
-                    <span style={{ minWidth: 16, textAlign: "center" }}>{quantity}</span>
-                    <button
-                      onClick={() => incrementQty(book.id)}
-                      className="btn"
-                      aria-label={`Increase quantity of ${book.title}`}
-                      style={{ minWidth: 30, fontSize: "1.2rem", padding: "4px 8px" }}
-                      title="Increase quantity"
-                    >+</button>
-                  </div>
-                </td>
-                <td style={{ textAlign: "center" }}>
-                  ${(quantity * book.price).toFixed(2)}
-                </td>
-                <td style={{ textAlign: "center" }}>
-                  <button
-                    onClick={() => removeFromCart(book.id)}
-                    className="btn"
-                    aria-label={`Remove ${book.title} from cart`}
-                    style={{
-                      background: "#913724",
-                      color: "white",
-                      padding: "5px 10px",
-                      fontSize: "0.95rem",
-                    }}
-                    title="Remove from cart"
-                  >
-                    Remove
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {cartItems.map(({ book, quantity }) => (
+          <CartItem
+            key={book.id}
+            book={book}
+            quantity={quantity}
+            incrementQty={incrementQty}
+            decrementQty={decrementQty}
+            removeFromCart={removeFromCart}
+          />
+        ))}
         <div
           style={{
             marginTop: "15px",
@@ -123,6 +68,8 @@ function Cart() {
             fontWeight: 600,
             fontSize: "1.13rem",
             color: "var(--accent-color)",
+            borderTop: "1px solid var(--border-color)",
+            paddingTop: "10px"
           }}
         >
           <div>
