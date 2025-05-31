@@ -74,12 +74,15 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  background: transparent;
 }
 
 .subtitle {
-  color: var(--kavia-orange);
+  color: var(--accent-color);
   font-weight: 500;
   font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .title {
