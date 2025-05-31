@@ -3,9 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 
-// Placeholder page components for each main route
-
+// Import real pages
 import Home from './pages/Home';
+import BestSellers from './pages/BestSellers';
+import NewArrivals from './pages/NewArrivals';
+import Contact from './pages/Contact';
+import Cart from './pages/Cart';
 
 // PUBLIC_INTERFACE
 function HomePage() {
