@@ -7,7 +7,8 @@ import "../App.css";
  */
 // PUBLIC_INTERFACE
 function BestSellers() {
-  // Reuse BookGrid's filtering prop for isBestSeller
+  // Grid shows only best sellers (those with isBestSeller === true)
+  // Includes image, price, name, and Add to Cart
   return (
     <div
       style={{
