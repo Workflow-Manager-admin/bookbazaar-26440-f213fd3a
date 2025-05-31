@@ -67,32 +67,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <nav className="navbar">
-          <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-              <div className="logo">
-                <span className="logo-symbol">*</span> BookBazaar
-              </div>
-              <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-                <NavLink to="/" className={({isActive}) => isActive ? "btn btn-large" : "btn"} end>Home</NavLink>
-                <NavLink to="/best-sellers" className={({isActive}) => isActive ? "btn btn-large" : "btn"}>Best Sellers</NavLink>
-                <NavLink to="/new-arrivals" className={({isActive}) => isActive ? "btn btn-large" : "btn"}>New Arrivals</NavLink>
-                <NavLink to="/contact" className={({isActive}) => isActive ? "btn btn-large" : "btn"}>Contact Info</NavLink>
-                <NavLink
-                  to="/cart"
-                  className={({isActive}) =>
-                    isActive
-                      ? "btn btn-large"
-                      : "btn"
-                  }
-                  style={{ marginLeft: "8px" }}
-                >
-                  🛒 Cart
-                </NavLink>
-              </div>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
         <main>
           <div className="container" style={{ paddingTop: "120px" }}>
             <Routes>
