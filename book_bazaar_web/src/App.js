@@ -5,15 +5,12 @@ import Navbar from './components/Navbar';
 
 // Placeholder page components for each main route
 
+import Home from './pages/Home';
+
 // PUBLIC_INTERFACE
 function HomePage() {
-  return (
-    <div className="hero">
-      <div className="subtitle">Welcome to BookBazaar</div>
-      <h1 className="title">Home</h1>
-      <div className="description">Discover your next favorite book!</div>
-    </div>
-  );
+  // Render actual Home.js page instead of a placeholder
+  return <Home />;
 }
 
 // PUBLIC_INTERFACE
@@ -76,6 +73,7 @@ function App() {
               <Route path="/new-arrivals" element={<NewArrivalsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/cart" element={<CartPage />} />
+              {/* If route does not match, also go to actual Home */}
               <Route path="*" element={<HomePage />} />
             </Routes>
           </div>
