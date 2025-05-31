@@ -25,12 +25,151 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', 'Roboto', 'Arial', sans-serif;
   background-color: var(--background-dark);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* --- BookBazaar Yellow/White Home Page Styles --- */
+
+.sticky-header {
+  background: var(--primary-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: var(--header-height);
+  z-index: 1000;
+  /* Shadows for separation from main content */
+  box-shadow: 0 2px 8px 0 rgba(230,200,10,0.13);
+}
+
+.latest-products-heading {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.6em;
+  letter-spacing: 0.05em;
+  color: var(--primary-text);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Responsive Book Grid: 5→3→1 columns */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin: 0 0 24px 0;
+}
+
+@media (max-width: 1050px) {
+  .book-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Book Card: modern, clean, light style */
+.book-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--action-bg);
+  border-radius: 4px;
+  border: 1px solid var(--border-default);
+  box-shadow: 0 2px 8px 0 rgba(37,37,37,0.07);
+  overflow: hidden;
+  transition: box-shadow 0.16s cubic-bezier(.4,0,.2,1),transform 0.13s;
+  min-width: 0;
+}
+.book-card:hover, .book-card:focus-within {
+  box-shadow: 0 8px 26px 0 rgba(255,204,0,0.12);
+  transform: translateY(-2px) scale(1.013);
+}
+
+/* Book cover, always 3:4 aspect, center-cropped */
+.book-image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+  background: #f7f4f3;
+  border-bottom: 1px solid var(--border-default);
+  box-shadow: 0 2px 14px 0 rgba(40,40,40,0.09);
+}
+
+.book-info {
+  padding: 14px 12px 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 100px;
+}
+
+.book-title {
+  font-weight: bold;
+  color: var(--primary-text);
+  font-size: 1.09em;
+  margin-bottom: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.book-author {
+  color: var(--muted-text);
+  font-size: 0.96em;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.book-price {
+  font-weight: bold;
+  font-size: 1.07em;
+  margin-bottom: 3px;
+}
+
+.book-current-price {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 7px;
+}
+
+.book-old-price {
+  color: #bbb;
+  text-decoration: line-through;
+  font-weight: 400;
+  font-size: 0.98em;
+}
+
+/* Add to Cart - modern CTA */
+.book-card .btn {
+  width: 100%;
+  margin-top: 14px;
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  border-radius: 0 0 4px 4px;
+  font-size: 1.08em;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  border: none;
+  box-shadow: none;
+  transition: background 0.13s cubic-bezier(.4,0,.2,1);
+}
+.book-card .btn:hover,
+.book-card .btn:focus {
+  background: #ffe266;
+  color: var(--primary-text);
+}
+
+/* Hide default App.css grid styles for dark theme book grid on Home */
 
 .app {
   min-height: 100vh;
