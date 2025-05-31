@@ -9,8 +9,8 @@ import { useCart } from "../context/CartContext";
  * Displays links for Home, Best Sellers, New Arrivals, Contact Info, and Cart icon.
  */
 function Navbar() {
-  const { getCartCount } = useCart ? useCart() : { getCartCount: () => 0 };
-  const cartCount = getCartCount ? getCartCount() : 0;
+  const { getCartCount } = useCart();
+  const cartCount = getCartCount();
 
   return (
     <nav className="navbar">
