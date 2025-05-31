@@ -185,7 +185,7 @@ const DUMMY_BOOKS = [
     author: "Frank Herbert",
     price: 22.0,
     oldPrice: 27.0,
-    image: "https://images-na.ssl-images-amazon.com/images/I/91FNbzxGnhL.jpg",
+    image: "https://covers.openlibrary.org/b/id/9259256-L.jpg", // Placeholder from Open Library if previous was broken
     isBestSeller: false,
     isNewArrival: true,
   },
@@ -194,7 +194,7 @@ const DUMMY_BOOKS = [
     title: "A Promised Land",
     author: "Barack Obama",
     price: 19.99,
-    image: "https://images-na.ssl-images-amazon.com/images/I/81y-6Wx5wNL.jpg",
+    image: "https://covers.openlibrary.org/b/id/10523374-L.jpg", // Placeholder from Open Library if previous was broken
     isBestSeller: true,
     isNewArrival: true,
   },
