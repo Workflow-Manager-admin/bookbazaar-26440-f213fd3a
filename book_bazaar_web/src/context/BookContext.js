@@ -44,7 +44,8 @@ const DUMMY_BOOKS = [
     title: "Zero to One",
     author: "Peter Thiel",
     price: 15.95,
-    image: "https://m.media-amazon.com/images/I/71m-MxdJ2WL._AC_UY327_FMwebp_QL65_.jpg",
+    // Updated with a very reliable and popular cover image URL
+    image: "https://images-na.ssl-images-amazon.com/images/I/71m-MxdJ2WL.jpg",
     isBestSeller: true,
     isNewArrival: false,
   },
@@ -64,7 +65,8 @@ const DUMMY_BOOKS = [
     title: "Where the Crawdads Sing",
     author: "Delia Owens",
     price: 13.99,
-    image: "https://m.media-amazon.com/images/I/81fgpPYNroL._AC_UY327_FMwebp_QL65_.jpg",
+    // More reliable Amazon image
+    image: "https://images-na.ssl-images-amazon.com/images/I/81WWiiLg1vL.jpg",
     isBestSeller: true,
     isNewArrival: true,
   },
@@ -73,7 +75,8 @@ const DUMMY_BOOKS = [
     title: "The Silent Patient",
     author: "Alex Michaelides",
     price: 15.25,
-    image: "https://m.media-amazon.com/images/I/81fpF-7+3iL._AC_UY327_FMwebp_QL65_.jpg",
+    // More reliable image
+    image: "https://images-na.ssl-images-amazon.com/images/I/71oKwu0-TFL.jpg",
     isBestSeller: false,
     isNewArrival: true,
   },
@@ -101,7 +104,8 @@ const DUMMY_BOOKS = [
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
     price: 14.49,
-    image: "https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UY327_FMwebp_QL65_.jpg",
+    // Use consistent Amazon URL, more reliable
+    image: "https://images-na.ssl-images-amazon.com/images/I/81OthjkJBuL.jpg",
     isBestSeller: true,
     isNewArrival: false,
   },
@@ -138,7 +142,8 @@ const DUMMY_BOOKS = [
     title: "Normal People",
     author: "Sally Rooney",
     price: 13.75,
-    image: "https://m.media-amazon.com/images/I/81WgFv7QsmL._AC_UY327_FMwebp_QL65_.jpg",
+    // More stable Amazon cover image for "Normal People"
+    image: "https://images-na.ssl-images-amazon.com/images/I/81WgFv7QsmL.jpg",
     isBestSeller: false,
     isNewArrival: true,
   },
@@ -147,7 +152,8 @@ const DUMMY_BOOKS = [
     title: "The Book Thief",
     author: "Markus Zusak",
     price: 12.5,
-    image: "https://m.media-amazon.com/images/I/81AFocW+p-L._AC_UY327_FMwebp_QL65_.jpg",
+    // Use the most stable Amazon cover image
+    image: "https://images-na.ssl-images-amazon.com/images/I/81AFocW+p-L.jpg",
     isBestSeller: false,
     isNewArrival: false,
   },
@@ -157,7 +163,8 @@ const DUMMY_BOOKS = [
     author: "Daniel Kahneman",
     price: 18.25,
     oldPrice: 22.99,
-    image: "https://m.media-amazon.com/images/I/41s54VP41vL._SX322_BO1,204,203,200_.jpg",
+    // More reliable and common English cover
+    image: "https://images-na.ssl-images-amazon.com/images/I/41oC6lM71uL._SX324_BO1,204,203,200_.jpg",
     isBestSeller: false,
     isNewArrival: true,
   },
@@ -175,7 +182,8 @@ const DUMMY_BOOKS = [
     title: "The Four Agreements",
     author: "Don Miguel Ruiz",
     price: 8.98,
-    image: "https://m.media-amazon.com/images/I/71zAW1rWWFL._AC_UY327_FMwebp_QL65_.jpg",
+    // Common good cover for this book
+    image: "https://images-na.ssl-images-amazon.com/images/I/81ZfQWQcpdL.jpg",
     isBestSeller: false,
     isNewArrival: false,
   },
