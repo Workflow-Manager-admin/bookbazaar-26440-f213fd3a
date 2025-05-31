@@ -1,32 +1,32 @@
 :root {
-  /* BookBazaar Yellow/White Reference Light Theme Colors for Home Page */
-  --primary-bg: #FFCC00;       /* sticky header, buttons */
-  --canvas-bg: #FFF;           /* main content */
-  --primary-text: #252525;     /* headings, nav */
-  --muted-text: #888;          /* secondary text */
-  --accent: #E53935;           /* highlighted/sale price, CTA */
-  --action-bg: #FFF;           /* card/input background */
-  --border-default: #EEE;      /* card borders */
+  /* BookBazaar Classic/Elegant Theme Colors */
+  --primary-bg: #FFCC00;         /* sticky header, buttons */
+  --canvas-bg: #F5F5DC;          /* main background: classic beige/ivory */
+  --primary-text: #252525;       /* headings, nav */
+  --muted-text: #888;            /* secondary text */
+  --accent: #E53935;             /* highlighted/sale price, CTA */
+  --action-bg: #FFFDF9;          /* subtle warm card/input background */
+  --border-default: #EEE;        /* card borders */
   --header-height: 60px;
 
-  /* BookBazaar Dark Theme Colors (needed for dark sections, e.g. Cart) */
+  /* BookBazaar Dark Theme Colors (for Cart, etc.) */
   --primary-color: #2C3E50;
   --secondary-color: #ECF0F1;
   --accent-color: #E67E22;
 
   /* Derived and theme variables */
   --background-dark: var(--primary-color);
-  --background-light: var(--secondary-color);
-  --text-color: var(--secondary-color);
-  --text-secondary: rgba(236, 240, 241, 0.75); /* secondary with opacity */
-  --border-color: rgba(236, 240, 241, 0.09);   /* faint border */
-  --accent-hover: #ff9e47;
+  --background-light: var(--canvas-bg); /* canvas-beige for light background */
+  --text-color: #252525; /* High contrast with new classic background */
+  --text-secondary: #746047; /* Muted brown/gray for classic style */
+  --border-color: rgba(140, 130, 100, 0.12); /* subtle warm border */
+  --accent-hover: #ffdf8a;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', 'Helvetica Neue', 'Roboto', 'Arial', sans-serif;
-  background-color: var(--background-dark);
+  background-color: var(--canvas-bg);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
