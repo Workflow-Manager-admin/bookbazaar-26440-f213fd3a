@@ -44,7 +44,7 @@ const DUMMY_BOOKS = [
     title: "Zero to One",
     author: "Peter Thiel",
     price: 15.95,
-    image: "https://images-na.ssl-images-amazon.com/images/I/81K6BZSdG0L.jpg",
+    image: "https://m.media-amazon.com/images/I/71m-MxdJ2WL._AC_UY327_FMwebp_QL65_.jpg",
     isBestSeller: true,
     isNewArrival: false,
   },
